@@ -59,7 +59,7 @@ class DebugToolbar(object):
             panel.process_response(response)
 
         if response.content_type in self.html_types:
-            static_path = request.static_url(STATIC_PATH)
+            static_path = request.static_path(STATIC_PATH)
             root_path = request.route_url(ROOT_ROUTE_NAME)
             button_style = get_setting(request.registry.settings,
                     'button_style', '')
